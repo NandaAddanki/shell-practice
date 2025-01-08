@@ -1,4 +1,4 @@
 #!/bin/bash/
 names =("Abhiram","vedanth","Addanki")
 
-echo "names[1]"
+echo "listed names are:${names[1]}"
