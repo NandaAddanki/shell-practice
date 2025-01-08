@@ -1,7 +1,7 @@
 #!/bin/bash
 
 day=$today
-if [ $day -ne "sat" or "sun" ]
+if [ $day -ne "sat" || "sun" ]
 then 
 echo "There is office"
 else
