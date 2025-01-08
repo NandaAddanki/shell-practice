@@ -1,9 +1,9 @@
 
 #!/bin/bash
 
-userid=$(id -u)
+userid=$(id -u) # id -u will give user id eg:001
 
-if [ ${userid} -ne 0 ]
+if [ ${userid} -ne 0 ] # 0 is user id of root user
 then
 echo "User should have root previliges to install"
 exit 1
