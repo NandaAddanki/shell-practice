@@ -9,8 +9,9 @@ for packege in $@
 do 
 dnf list  installed $package
 if [ $? -ne 0 ]
- echo "install the $package"
-else 
- echo "$package is already installed"
+ then
+  echo "install the $package"
+ else 
+  echo "$package is already installed"
 fi
 done
