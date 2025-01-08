@@ -5,14 +5,28 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
-for packege in $@
-do 
-dnf list  installed $package
-if [ $? -ne 0 ]
- then
-  echo "install the $package"
-  dnf install $package -y
- else 
-  echo "$package is already installed"
-fi
+# for packege in $@
+# do 
+# dnf list  installed $package
+# if [ $? -ne 0 ]
+#  then
+#   echo "install the $package"
+#   dnf install $package -y
+#  else 
+#   echo "$package is already installed"
+# fi
+# done
+
+
+for package in $@ # $@ refers to all arguments passed to it
+do
+    dnf list installed $package
+    if [ $? -ne 0 ]
+    then
+        echo "$package is not installed, going to install it.."
+        dnf install $package -y
+        VALIDATE $? "Installing $package"
+    else
+        echo "$package is already installed..nothing to do"
+    fi
 done
