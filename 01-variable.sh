@@ -1,6 +1,6 @@
 #!/bin/bash
  
- A= Hi How are you
- B= I'm good. what about you
+ A= HiHowareyou
+ B= I'mgood.whataboutyou
  echo "hey:$A"
  echo "yes:$B"
