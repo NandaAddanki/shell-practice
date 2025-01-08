@@ -8,7 +8,7 @@ N="\e[0m"
 for packege in $@
 do 
 dnf list  installed $package
-if [ $? -ne 0]
+if [ $? -ne 0 ]
  echo "install the $package"
 else 
  echo "$package is already installed"
