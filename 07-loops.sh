@@ -11,6 +11,6 @@ dnf list  installed $package
 if [ $? -ne 0]
  echo "install the $package"
 else 
-echo "$package already installed"
+ echo "$package is already installed"
 fi
 done
